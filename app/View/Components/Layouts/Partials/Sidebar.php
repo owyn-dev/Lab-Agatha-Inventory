@@ -29,7 +29,6 @@ final class Sidebar extends Component
     private function buildMenu(): void
     {
         $this->menu = [
-            // Dashboard
             $this->createMenuItem(
                 title: 'Dashboard',
                 icon: 'bi bi-grid-fill',
@@ -37,8 +36,6 @@ final class Sidebar extends Component
                 permissions: ['view_dashboard'],
                 activeRoutes: ['dashboard']
             ),
-
-            // Priority Analysis
             $this->createMenuItem(
                 title: 'Priority Analysis',
                 icon: 'bi bi-graph-up',
@@ -46,8 +43,6 @@ final class Sidebar extends Component
                 permissions: ['view_priority_analysis'],
                 activeRoutes: ['priority-analysis']
             ),
-
-            // Manage Product
             $this->createMenuItem(
                 title: 'Manage Product',
                 icon: 'bi bi-cake2',
@@ -68,8 +63,6 @@ final class Sidebar extends Component
                     ),
                 ]
             ),
-
-            // Manage Production
             $this->createMenuItem(
                 title: 'Manage Production',
                 icon: 'bi bi-cake',
@@ -103,8 +96,6 @@ final class Sidebar extends Component
                     ),
                 ]
             ),
-
-            // Manage Sales
             $this->createMenuItem(
                 title: 'Manage Sales',
                 icon: 'bi bi-basket',
@@ -131,8 +122,6 @@ final class Sidebar extends Component
                     ),
                 ]
             ),
-
-            // Manage Inventory
             $this->createMenuItem(
                 title: 'Manage Inventory',
                 icon: 'bi bi-box-seam',
@@ -179,8 +168,6 @@ final class Sidebar extends Component
                     ),
                 ]
             ),
-
-            // Manage Access
             $this->createMenuItem(
                 title: 'Manage Access',
                 icon: 'bi bi-people',

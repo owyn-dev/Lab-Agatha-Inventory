@@ -56,8 +56,8 @@ To get a local copy of this project up and running, follow these steps.
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/owyn-dev/agatha-inventory.git
-   cd agatha-inventory
+   git clone https://github.com/owyn-dev/Lab-Agatha-Inventory.git
+   cd Lab-Agatha-Inventory
    ```
 
 2. **Install dependencies:**

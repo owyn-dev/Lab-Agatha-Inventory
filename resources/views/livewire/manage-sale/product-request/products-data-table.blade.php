@@ -23,8 +23,8 @@
             </a>
           </th>
           <th scope="col">
-            <a href="#" wire:click.prevent="sortBy('stock')">
-              Inventory Stock {!! $sortField === 'stock' ? ($sortDirection === 'asc' ? '↑' : '↓') : '' !!}
+            <a href="#" wire:click.prevent="sortBy('total_current_stock')">
+              Inventory Stock {!! $sortField === 'total_current_stock' ? ($sortDirection === 'asc' ? '↑' : '↓') : '' !!}
             </a>
           </th>
           <th scope="col">Action</th>
@@ -36,7 +36,7 @@
             <td>{{ $product->code }}</td>
             <td>{{ $product->name }}</td>
             <td>{{ $product->variant->label() }}</td>
-            <td>{{ $product->stock }}</td>
+            <td>{{ $product->total_current_stock }}</td>
             <td>
               <a class="btn icon btn-sm btn-primary" href="#" wire:loading.remove wire:target="save" @click="selectedProduct = { id: '{{ $product->id }}', code: '{{ $product->code }}', name: '{{ $product->name }}', variant: '{{ $product->variant->label() }}' }; setTimeout(() => showModal = true, 400);">
                 <i class="bi bi-plus-circle"></i>

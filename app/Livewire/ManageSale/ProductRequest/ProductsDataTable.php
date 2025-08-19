@@ -53,9 +53,14 @@ final class ProductsDataTable extends Component
     public function products()
     {
         return Product::query()
+            ->withSum(['inventoryIn as total_current_stock' => function ($query): void {
+                $query->where('wasted', 'no');
+            }], 'current_stock')
             ->when($this->search, function ($query): void {
-                $query->where('code', 'like', '%' . $this->search . '%')
-                    ->orWhere('name', 'like', '%' . $this->search . '%');
+                $query->where(function ($q): void {
+                    $q->where('code', 'like', '%' . $this->search . '%')
+                        ->orWhere('name', 'like', '%' . $this->search . '%');
+                });
             })
             ->orderBy($this->sortField, $this->sortDirection)
             ->paginate(5);
